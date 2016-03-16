@@ -1,0 +1,1 @@
+sudo ap-hotspot start
