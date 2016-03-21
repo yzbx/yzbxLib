@@ -1,7 +1,8 @@
 win32 {
-	
+        message(opencv error: need windows support)
 }
 unix {
+message(opencv: unix support okay!!!)
 # opencv 2.4.8 without nonfree
 	INCLUDEPATH+=/usr/include/opencv \
 		/usr/include/opencv2 \
