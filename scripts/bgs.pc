@@ -1,0 +1,11 @@
+# Package Information for pkg-config
+
+prefix=/usr/local
+libdir=${prefix}/lib
+includedir=${prefix}/include/package_bgs
+
+Name: bgs
+Description: Open Source Background Subtraction Algorithm Library
+Version: 2016.03.26
+Libs: -L${libdir} -lbgs
+Cflags: -I${includedir}
