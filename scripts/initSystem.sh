@@ -20,4 +20,10 @@ sudo apt-get install libfftw3-dev -y
 #sudo apt-get install sabam
 
 mkdir ~/git
-cd ~/git & git clone https://github.com/andrewssobral/bgslibrary.git
+#cd ~/git & git clone https://github.com/andrewssobral/bgslibrary.git
+
+#sudo gedit /etc/profile
+#export PKG_CONFIG_PATH=/usr/local/Qt5.5.1/5.5/gcc/lib/pkgconfig:$PKG_CONFIG_PATH
+#export LD_LIBRARY_PATH=/usr/local/Qt5.5.1/5.5/gcc/lib:$LD_LIBRARY_PATH
+#export CMAKE_MODULE_PATH=/usr/local/Qt5.5.1/5.5/gcc/lib/cmake:$CMAKE_MODULE_PATH
+#export PATH=/usr/local/Qt5.5.1/5.5//gcc/bin:$PATH
