@@ -27,3 +27,11 @@ mkdir ~/git
 #export LD_LIBRARY_PATH=/usr/local/Qt5.5.1/5.5/gcc/lib:$LD_LIBRARY_PATH
 #export CMAKE_MODULE_PATH=/usr/local/Qt5.5.1/5.5/gcc/lib/cmake:$CMAKE_MODULE_PATH
 #export PATH=/usr/local/Qt5.5.1/5.5//gcc/bin:$PATH
+
+#gedit ~/.bashrc
+# ~/.bashrc
+# if [[ $- == *i* ]]
+# then
+#     bind '"\e[A": history-search-backward'
+#     bind '"\e[B": history-search-forward'
+# fi
