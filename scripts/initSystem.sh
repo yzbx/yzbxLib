@@ -23,10 +23,11 @@ mkdir ~/git
 #cd ~/git & git clone https://github.com/andrewssobral/bgslibrary.git
 
 #sudo gedit /etc/profile
-#export PKG_CONFIG_PATH=/usr/local/Qt5.5.1/5.5/gcc/lib/pkgconfig:$PKG_CONFIG_PATH
-#export LD_LIBRARY_PATH=/usr/local/Qt5.5.1/5.5/gcc/lib:$LD_LIBRARY_PATH
-#export CMAKE_MODULE_PATH=/usr/local/Qt5.5.1/5.5/gcc/lib/cmake:$CMAKE_MODULE_PATH
-#export PATH=/usr/local/Qt5.5.1/5.5//gcc/bin:$PATH
+export QT5_ROOT=/home/yzbx/ComputerVision/Qt5.6.0/5.6/gcc_64
+export PKG_CONFIG_PATH=${QT5_ROOT}/lib/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=${QT5_ROOT}/lib:$LD_LIBRARY_PATH
+export CMAKE_MODULE_PATH=${QT5_ROOT}/lib/cmake:$CMAKE_MODULE_PATH
+export PATH=${QT5_ROOT}/bin:$PATH
 
 #gedit ~/.bashrc
 # ~/.bashrc
