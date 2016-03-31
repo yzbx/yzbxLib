@@ -2,7 +2,8 @@
 
 #add opencv-nonfree model
 sudo add-apt-repository --yes ppa:xqms/opencv-nonfree
-sudo add-apt-repository ppa:webupd8team/atom  
+sudo add-apt-repository --yes ppa:webupd8team/atom  
+sudo add-apt-repository --yes ppa:george-edison55/cmake-3.x
 sudo apt-get update
 #sudo apt-get install atom 
 sudo apt-get install build-essential -y
