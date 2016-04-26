@@ -4,6 +4,7 @@
 sudo add-apt-repository --yes ppa:xqms/opencv-nonfree
 sudo add-apt-repository --yes ppa:webupd8team/atom  
 sudo add-apt-repository --yes ppa:george-edison55/cmake-3.x
+sudo add-apt-repository ppa:mc3man/trusty-media
 #python ide
 sudo apt-add-repository ppa:ninja-ide-developers/ninja-ide-stable
 sudo apt-get update
@@ -23,6 +24,7 @@ sudo apt-get install cmake-gui -y
 sudo apt-get install tree -y
 sudo apt-get install libfftw3-dev -y
 sudo apt-get install python-dev
+sudo apt-get install ffmpeg
 
 mkdir ~/git
 #cd ~/git & git clone https://github.com/andrewssobral/bgslibrary.git
