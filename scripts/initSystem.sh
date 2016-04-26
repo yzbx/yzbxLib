@@ -24,6 +24,9 @@ sudo apt-get install cmake-gui -y
 sudo apt-get install tree -y
 sudo apt-get install libfftw3-dev -y
 sudo apt-get install python-dev
+# add ffmpeg support for opencv to use VideoCapture.
+sudo apt-get install libavformat-dev
+sudo apt-get install x264 v4l-utils ffmpeg
 sudo apt-get install ffmpeg
 
 mkdir ~/git
