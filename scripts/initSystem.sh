@@ -4,6 +4,7 @@
 #sudo add-apt-repository --yes ppa:xqms/opencv-nonfree
 sudo add-apt-repository --yes ppa:webupd8team/atom
 sudo add-apt-repository --yes ppa:george-edison55/cmake-3.x
+sudo add-apt-repository --yes ppa:lyx-devel/release
 #sudo add-apt-repository ppa:mc3man/trusty-media
 #python ide
 #sudo apt-add-repository ppa:ninja-ide-developers/ninja-ide-stable
@@ -23,12 +24,17 @@ sudo apt-get install nautilus-open-terminal libgnome2-bin-y
 sudo apt-get install cmake-gui -y
 sudo apt-get install tree -y
 sudo apt-get install synaptic -y
+sudo apt-get install wget octave -y
+sudo apt-get install lyx -y
+
 #sudo apt-get install libfftw3-dev -y
 #sudo apt-get install python-dev
 # add ffmpeg support for opencv to use VideoCapture.
-#sudo apt-get install libavformat-dev
-#sudo apt-get install x264 v4l-utils ffmpeg
-#sudo apt-get install ffmpeg
+sudo apt-get install libavformat-dev -y
+sudo apt-get install x264 v4l-utils ffmpeg -y
+
+# add for opencv + qt + ubuntu16.04 + python, remove gl.h error
+sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
 
 mkdir ~/git
 #cd ~/git & git clone https://github.com/andrewssobral/bgslibrary.git
@@ -40,8 +46,7 @@ export LD_LIBRARY_PATH=${QT5_ROOT}/lib:$LD_LIBRARY_PATH
 export CMAKE_MODULE_PATH=${QT5_ROOT}/lib/cmake:$CMAKE_MODULE_PATH
 export PATH=${QT5_ROOT}/bin:$PATH
 
-#gedit ~/.bashrc
-# ~/.bashrc
+###gedit ~/.bashrc
 # if [[ $- == *i* ]]
 # then
 #     bind '"\e[A": history-search-backward'
