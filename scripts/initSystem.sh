@@ -30,21 +30,31 @@ sudo apt-get install lyx -y
 #sudo apt-get install libfftw3-dev -y
 #sudo apt-get install python-dev
 # add ffmpeg support for opencv to use VideoCapture.
-sudo apt-get install libavformat-dev -y
 sudo apt-get install x264 v4l-utils ffmpeg -y
+sudo apt-get install libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 
 # add for opencv + qt + ubuntu16.04 + python, remove gl.h error
 sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
 
+sudo apt-get install zeal
+
+### add for cv2 model in python, but may not necessary
+#sudo apt-get install python-opencv
 mkdir ~/git
+mkdir ~/config
+mkdir ~/test
 #cd ~/git & git clone https://github.com/andrewssobral/bgslibrary.git
 
 #sudo gedit /etc/profile
-export QT5_ROOT=/home/yzbx/ComputerVision/Qt5.6.0/5.6/gcc_64
+export QT5_ROOT=/home/yzbx/linux/Qt5.6.0/5.6/gcc_64
 export PKG_CONFIG_PATH=${QT5_ROOT}/lib/pkgconfig:$PKG_CONFIG_PATH
-export LD_LIBRARY_PATH=${QT5_ROOT}/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=${QT5_ROOT}/lib:${QT5_ROOT}/plugins/platforms:$LD_LIBRARY_PATH
+export LIBRARY_PATH=${QT5_ROOT}/lib:${QT5_ROOT}/plugins/platforms:$LIBRARY_PATH
 export CMAKE_MODULE_PATH=${QT5_ROOT}/lib/cmake:$CMAKE_MODULE_PATH
 export PATH=${QT5_ROOT}/bin:$PATH
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${QT5_ROOT}/plugins/platforms:${QT5_ROOT}/lib:$PYTHONEPATH
+export QT_QPA_PLATFORM_PLUGIN_PATH=${QT5_ROOT}/plugins
 
 ###gedit ~/.bashrc
 # if [[ $- == *i* ]]
