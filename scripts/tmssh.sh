@@ -14,12 +14,12 @@
 
 while true
 do
-if [ ! `pgrep tmate` ] ; then
-tmate -S /tmp/tmate.sock new-session -d
-tmate -S /tmp/tmate.sock wait tmate-ready
-tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}' > /tmp/mail.txt
-mail -s "tmate" youdaoyzbx@163.com < /tmp/mail.txt
-mail -s "tmate" 1627884766@qq.com < /tmp/mail.txt
+if [ ! `pgrep tmate | wc -l` ] ; then
+    tmate -S /tmp/tmate.sock new-session -d ;
+    tmate -S /tmp/tmate.sock wait tmate-ready
+    tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}' > /tmp/mail.txt
+    mail -s "tmate" youdaoyzbx@163.com < /tmp/mail.txt
+    mail -s "tmate" 1627884766@qq.com < /tmp/mail.txt
 fi
 sleep 30
 done
