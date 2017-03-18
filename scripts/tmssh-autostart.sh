@@ -12,7 +12,7 @@
 # tmate -S /tmp/tmate.sock display -p '#{tmate_web}'    # Prints the web connection string
 # tmate -S /tmp/tmate.sock display -p '#{tmate_web_ro}' # Prints the read-only web connection string
 
-mailfile = /home/yzbx/git/yzbxLib/scripts/mail.txt
+mailfile=/home/yzbx/git/yzbxLib/scripts/mail.txt
 while true
 do
 if test `pgrep tmate | wc -l` = '0' ; then
@@ -24,7 +24,7 @@ if test `pgrep tmate | wc -l` = '0' ; then
     echo "send email"
     mail -s "tmate" youdaoyzbx@163.com < $mailfile
     mail -s "tmate" 1627884766@qq.com < $mailfile
-    cd /home/yzbx/git/yzbxLib/scripts && git commit -a && git push
+    cd /home/yzbx/git/yzbxLib/scripts && git add * && git commit -m "auto commit" && git push
 fi
 sleep 30
 done
