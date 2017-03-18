@@ -12,6 +12,8 @@
 # tmate -S /tmp/tmate.sock display -p '#{tmate_web}'    # Prints the web connection string
 # tmate -S /tmp/tmate.sock display -p '#{tmate_web_ro}' # Prints the read-only web connection string
 
+while true
+do
 if test `pgrep tmate | wc -l` = '0' ; then
     echo "start tmate"
     tmate -S /tmp/tmate.sock new-session -d ;
@@ -22,3 +24,5 @@ if test `pgrep tmate | wc -l` = '0' ; then
     mail -s "tmate" youdaoyzbx@163.com < /home/yzbx/mail.txt
     mail -s "tmate" 1627884766@qq.com < /home/yzbx/mail.txt
 fi
+sleep 30
+done
