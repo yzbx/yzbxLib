@@ -4,4 +4,4 @@ Root=/usr/local/opencv3
 export LD_LIBRARY_PATH=$Root/lib
 export PKG_CONFIG_PATH=$Root/lib/pkgconfig
 export INCLUDE_PATH=$Root/include
-export PYTHONPATH=${PYTHONEPATH}:$Root/lib/python2.7/dist-packages
+export PYTHONPATH=${PYTHONEPATH}:$Root/lib/python2.7/dist-packages:$Root/lib/python2.7/site-packages
