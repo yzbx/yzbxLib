@@ -1,0 +1,5 @@
+/traffic/JPEGImages/10000.jpg /traffic/Annotations/10000.xml
+/traffic/JPEGImages/10001.jpg /traffic/Annotations/10001.xml
+/traffic/JPEGImages/10002.jpg /traffic/Annotations/10002.xml
+/traffic/JPEGImages/10003.jpg /traffic/Annotations/10003.xml
+/traffic/JPEGImages/10004.jpg /traffic/Annotations/10004.xml

@@ -1,0 +1,6 @@
+/traffic/JPEGImages/39213.jpg /traffic/Annotations/39213.xml
+/traffic/JPEGImages/39214.jpg /traffic/Annotations/39214.xml
+/traffic/JPEGImages/39215.jpg /traffic/Annotations/39215.xml
+/traffic/JPEGImages/39216.jpg /traffic/Annotations/39216.xml
+/traffic/JPEGImages/39217.jpg /traffic/Annotations/39217.xml
+/traffic/JPEGImages/39218.jpg /traffic/Annotations/39218.xml
