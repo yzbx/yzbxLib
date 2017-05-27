@@ -345,19 +345,20 @@ Email: hongan@iscas.ac.cn
 \begin_layout Abstract
 Object Tracking is an important task in Computer Vision, which has gained
  increasing attention from academia to industry.
- In this paper we propose a real-time tracking system based on weak segmentation.
- Different from general tracking by detection system, we donot classify
+ In this paper, we propose a real-time tracking system based on weak segmentatio
+n.
+ Different from general tracking by detection systems, we do not classify
  objects into car, cat, bike or other things before tracking, instead we
  just classify the image into object area and non-object area before tracking.
- Many tracking system which based on weak segmentation simply combine weak
- segmentation results with Kalman filter, which cannot tracking objects
- well when target moves irregularly.
+ Many tracking systems which based on weak segmentation simply combine weak
+ segmentation results with Kalman filter, which cannot track objects well
+ when the target moves irregularly.
  In this paper, we use state-of-art background subtraction methods to accomplish
- weak segmentation, and incorporates weak segmentation results with local
+ weak segmentation and incorporates weak segmentation results with the local
  invariant feature to create robust object association, finally we proposal
  a status machine to convert temporary object association into long-term
  object tracking results.
- The experiment show our algorithm outperforms the state-of-art tracking
+ The experiment shows our algorithm outperforms the state-of-art tracking
  by weak segmentation algorithms.
 \end_layout
 
@@ -400,16 +401,16 @@ key "huang2014surveillance"
 
 \end_inset
 
- and the number of Videos are increasing every day.
+ and the number of Videos is increasing every day.
  To use the information hidden in those mass data, A nature way is to do
  objects classification, find object's location and re-identification objects
- in image sequence, finally transform the mass video information into short
+ in image sequences, finally transform the mass video information into short
  text description or statistic graph.
- In this paper, we focus on tracking system, which offer information for
- object's location and the re-identification information in image sequence.
+ In this paper, we focus on the tracking system, which offers information
+ for object's location and the re-identification information in image sequences.
  In recent years, many researchers have made significant progress in tracking
  system.
- For tracking by detection system, there are 
+ For tracking by detection systems, there are 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Redmon2016YouOL,Girshick2015FastR,Liu2016SSDSS,Redmon2016YOLO9000BF"
@@ -537,7 +538,7 @@ tracking by detection: Detection image mainly means using boxes to annotation
 
 \begin_layout Plain Layout
 tracking by semantic segmentation: semantic segmentation mainly means segmenting
- each targets, offer classification information and contour information.
+ each target, offer classification information and contour information.
 \end_layout
 
 \end_inset
@@ -578,7 +579,7 @@ tracking by semantic segmentation: semantic segmentation mainly means segmenting
 \begin_inset Text
 
 \begin_layout Plain Layout
-tracking by weak segmentation: weak segmentation cannot distingush targets
+tracking by weak segmentation: weak segmentation cannot distinguish targets
  from targets.
  
 \end_layout
@@ -633,21 +634,21 @@ tracking by weak segmentation: weak segmentation cannot distingush targets
 \end_layout
 
 \begin_layout Standard
-For the consideration of real-time application, tracking by weak segmentation
+For the consideration of real-time applications, tracking by weak segmentation
  is the fastest.
  To apply tracking algorithm, we simply need to know what's object and what's
  not.
  Then according to the similarity of objects in adjacent images, we associate
  them in entire sequence.
- In this paper we integrate background subtraction, Kalman Filter and local
- invariant feature into bi-graph model to implement real-time object tracking
+ In this paper, we integrate background subtraction, Kalman Filter and local
+ invariant feature into a bi-graph model to implement real-time object tracking
  system.
- Assuming input an image sequence into our system, the output is the trajectory
- of each objects in image sequence.
- background subtraction here does the weak segmentation task, by converting
- input image into binary mask; Kalman Filter here offer basic location predictio
-n and Local Invariant Feature here offer object feature to associate object
- in adjacent images.
+ Assuming input image sequences into our system, the output is the trajectory
+ of each object in image sequences.
+ background subtraction here does the weak segmentation task by converting
+ the input image into a binary mask; Kalman Filter here offer basic location
+ prediction and Local Invariant Feature here offer object feature to associate
+ the object with adjacent images.
 \end_layout
 
 \begin_layout Standard
@@ -656,7 +657,7 @@ For tracking by weak segmentation system, challenging mainly in accuracy
  For most surveillance video, we can simply use background subtraction algorithm
  to obtain accuracy foreground segmentation results.
  In state of art method for background subtraction, the accuracy for foreground
- segmentation have achieve 0.96 average precision and 0.95 recall for baseline
+ segmentation have achieved 0.96 average precision and 0.95 recall for baseline
  test datasets 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -664,12 +665,13 @@ key "Babaee2017ADC"
 
 \end_inset
 
-, but shadow of object, dynamic background and intermittent motion of objects
- remain challenging for state-of-art foreground segmentation methods.
+, but the shadow of objects, dynamic background and intermittent motion
+ of objects remain challenging for state-of-art foreground segmentation
+ methods.
 \end_layout
 
 \begin_layout Standard
-Our proposed system include follow steps: 
+Our proposed system include following steps: 
 \end_layout
 
 \begin_layout Enumerate
@@ -685,7 +687,7 @@ n
 
 \begin_layout Enumerate
 \noindent
-Association objects in adjacent frames: apply bi-graph model.
+Association objects in adjacent frames: apply the bi-graph model.
 \end_layout
 
 \begin_layout Enumerate
@@ -702,8 +704,8 @@ Tracking by Detection
 \end_layout
 
 \begin_layout Standard
-A lot of work has been published on tracking by detection system, the detail
- can be see from 
+A lot of work has been published on tracking by detection systems, the detail
+ can be seen from 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Moussy2015ACV"
@@ -718,8 +720,8 @@ key "Smeulders2014VisualTA"
 \end_inset
 
 .
- By detecting target, associating adjacent target, the tracking by detection
- system output the trajectory of target.
+ By detecting a target, associating it with adjacent targets, the tracking
+ by detection system output the trajectory of the target.
  It is found that depending on the choice of the detector, average tracking
  accuracy could exhibit a 45% standard deviation with only, on average,
  a 6.8% and 11.1% standard deviation in detector recall and precision respectively
@@ -777,15 +779,15 @@ Tracking by Segmentation
 \end_layout
 
 \begin_layout Standard
-Compare to Tracking by Detection system, work based on Tracking by Segmentation
+Compare to Tracking by Detection systems, work based on Tracking by Segmentation
  system is rare due to it's very hard to offer accuracy semantic segmentation
  results.
- However, for fixed video we can classify image into foreground and background
- (weak segmentation), when occlusion is rare, we can obtain semantic segmentatio
-n results through connect component analysis.
- And connect component analysis can be also use in video with regular background
- movement when combine it with optical flow.
- In this way tracking can combine with contour information to make results
+ However, for a fixed video, we can classify image sequences into foreground
+ and background (weak segmentation), when occlusion is rare, we can obtain
+ semantic segmentation results through connected component analysis.
+ And connected component analysis can be also used in videos with regular
+ background movement when combining it with optical flow.
+ In this way, tracking can combine with contour information to make results
  robust.
  For foreground segmentation, there are Gaussian Mixture Model (GMM) based
  methods 
@@ -809,7 +811,7 @@ key "Singh2010ImplementationOA"
 
 \end_inset
 
- and more foreground segmentation methods detail can be find in 
+ and more foreground segmentation methods detail can be found in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bouwmans2014TraditionalAR"
@@ -824,12 +826,12 @@ Adjacent Target Association
 \end_layout
 
 \begin_layout Standard
-Both Tracking by detection and Tracking by Segmentation system need to do
+Both Tracking by Detection and Tracking by Segmentation system need to do
  adjacent target association.
  And the features use for association can vary from point to area.
  Color, Edge, Optical Flow and Texture features are widely used for adjacent
- target association, combining with partial filter or Kalman filter, a Moravian
- approach can be established 
+ target association, combining with a partial filter or Kalman filter, a
+ Moravian approach can be established 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Breitenstein2009RobustTU"
@@ -838,7 +840,7 @@ key "Breitenstein2009RobustTU"
 
 .
  If the feature between objects is big enough and scored, we can also establish
- an bi-graph model 
+ a bi-graph model 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Huang2008RobustOT"
@@ -865,16 +867,16 @@ reference "fig:Tracking-Algorithm"
 \end_inset
 
 .
- Firstly we split the foreground mask into connect component(we call them
+ Firstly we split the foreground mask into connected component(we call them
  foreground blobs later).
- Next we use Hungarian algorithm with local invariant feature matching to
- do association between foreground blobs and tracked objects.
- Next we create the association graph for blobs and tracked objects, we
+ Next, we use Hungarian algorithm with local invariant feature matching
+ to do association between foreground blobs and tracked objects.
+ Next, we create the association graph for blobs and tracked objects, we
  classify node in association graph.
- For nodes need merge or split, we handle the occlusion and oversegmentation
+ For nodes need merge or split, we handle the occlusion and over segmentation
  for them; For nodes need new or delete, we update the tracked objects;
- For nodes need update, we maintain the tracking status for them.
- Finally, we output the trajectory result for current frame.
+ For nodes need an update, we maintain the tracking status for them.
+ Finally, we output the trajectory result for the current frame.
 \end_layout
 
 \begin_layout Standard
@@ -1004,7 +1006,7 @@ frame number, the timestamp for input video,
 \begin_inset Text
 
 \begin_layout Plain Layout
-pixel at location (i,j) in input frame at time t
+the pixel at location (i,j) in input frame at time t
 \end_layout
 
 \end_inset
@@ -1188,7 +1190,7 @@ reference "fig:Motion-Detection"
 
 \end_inset
 
- show basic system of background subtraction based background model.
+ shows a basic system of background subtraction model.
  When 
 \begin_inset Formula $t<1$
 \end_inset
@@ -1250,7 +1252,7 @@ I_{mask}(i,j)=\begin{cases}
 \end_inset
 
 .
- According the the benchmark and survey
+ According to the benchmark and survey
 \begin_inset CommandInset citation
 LatexCommand citep
 key "goyette2012changedetection"
@@ -1264,8 +1266,8 @@ key "noh2012new"
 
 \end_inset
 
- as our background subtraction method for it's advantage on speed and it's
- good resistance to background noise, light change.
+ as our background subtraction method for its advantage on speed and good
+ resistance to background noise, light change.
 \end_layout
 
 \begin_layout Standard
@@ -1290,7 +1292,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-background subtraction
+Background Subtraction
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Motion-Detection"
@@ -1320,11 +1322,11 @@ Because there may be two or more objects in
 \end_inset
 
 , we need to identify each object alone.
- By use Connect Component Analysis algorithm we can get 
+ By using Connected Component Analysis algorithm we can get 
 \begin_inset Formula $N_{blob}^{t}$
 \end_inset
 
- connect component in 
+ connected component in 
 \begin_inset Formula $I_{input}^{t}$
 \end_inset
 
@@ -1332,7 +1334,7 @@ Because there may be two or more objects in
 \begin_inset Formula $I_{mask}^{t}$
 \end_inset
 
-, the number of connect component may not equal to the number of objects
+, the number of connected component may not equal to the number of objects
  
 \begin_inset Formula $N_{object}^{t}$
 \end_inset
@@ -1340,12 +1342,13 @@ Because there may be two or more objects in
 .
  Two or more blob may come from the same object and one blob may contain
  two or more object too.
- In addition, there are pure noise blob as well.
- We use a area threshold 
+ In addition, there are pure noise blobs as well.
+ We use an area threshold 
 \begin_inset Formula $C_{area}$
 \end_inset
 
- to remove small blob and extract the center position for each remain blob.
+ to remove small blob and extract the center position for each remaining
+ blob.
 \end_layout
 
 \begin_layout Subsection
@@ -1353,13 +1356,14 @@ Association Objects in Adjacent Frames
 \end_layout
 
 \begin_layout Standard
-We have to assign blobs to objects, which can be see as an assignment problem.
+We have to assign blobs to objects, which can be seen as an assignment problem.
  If we suppose one blob only corresponds to one object, we can use Hungarian
  Algorithm to do this.
- However, above suppose is not true for most of time and we need to assign
- two or more blobs to one object and assign two or more objects to one blob.
- So we use local invariant feature to extend the Hungarian algorithm and
- deal the situation of object merge and split.
+ However, above suppose is not true for most of the time and we need to
+ assign two or more blobs to one object and assign two or more objects to
+ one blob.
+ So we use the local invariant feature to extend the Hungarian algorithm
+ and deal the situation of object merge and split.
 \end_layout
 
 \begin_layout Standard
@@ -1416,7 +1420,7 @@ reference "fig:Assignment-example"
  miss and new; object 7 split into blob 1 and blob 0, object 8 normally
  matched to blob2, object 9 and object 10 merged into blob3, object 11 and
  blob 4 have no matched blob/object.
- For object we called it's missing and for blob we need to new an object
+ For objects, we called it's missing; and for blobs, we need to new an object
  to match it.
  For a long period video tracking, the object may disappear.
  
@@ -1429,8 +1433,9 @@ Create Object Association Graph
 \begin_layout Standard
 Though use Hungarian Algorithm alone cannot deal with the problem of split
  and merge.
- However in most of time, Hungarian Algorithm can do right thing and we
- proposed to deal with split and merge alone with invariant local feature.
+ However, in most of the time, Hungarian Algorithm can do the right thing
+ and we proposed to deal with split and merge along with the invariant local
+ feature.
  For objects 
 \begin_inset Formula $O_{i}^{t},i\in[1,N_{object}^{t}]$
 \end_inset
@@ -1493,10 +1498,10 @@ here
  blobs need to match new objects, the objects missed and the normal match
  information between the objects and blobs.
  However, Hungarian Algorithm cannot obtain the occlusion information, which
- is a common thing often happened in tracking system.
+ is a common thing often happened in tracking systems.
  Normally, there are three ways to obtain the occlusion information when
- combine Local Feature Matching and Hungarian algorithm.
- For blobs which need matching new objects, we use local invariant feature
+ combining Local Feature Matching and Hungarian algorithm.
+ For blobs which need matching new objects, we use the local invariant feature
  to find whether it is the split of existed object.
  
 \end_layout
@@ -1507,12 +1512,12 @@ Using Local Feature Matching first, we can obtain the association between
  Because each blob may two or more blobs which have enough matched feature
  points with it, we can obtain occlusion information from Local Feature
  Matching alone.
- However, for smooth object or small object which has few feature points,
+ However, for a smooth object or small object which has few feature points,
  it often does not has enough feature points, so use Local Feature Matching
  alone, the smooth object and small object cannot be tracked well.
  So for missed objects or the blobs unmatched after Local Feature Matching,
  we use Hungarian algorithm to tracking them.
- This strategy can be see a
+ This strategy can be seen as
 \begin_inset Formula 
 \begin{align*}
 G_{LFM}^{t} & =LFM(O^{t},B^{t})=(V_{LFM}^{t},E_{LFM}^{t})\\
@@ -1541,8 +1546,8 @@ G_{HA}^{t} & =HA(O_{\lnot LFM}^{t},B_{\lnot LFM}^{t})=(V_{HA}^{t},E_{HA}^{t})
 \begin_inset Formula $E_{LFM}^{t}$
 \end_inset
 
- is the matches of Local Feature Matching, we map each matches as edge in
- our association graph.
+ is the matches of Local Feature Matching, we map each match as an edge
+ in our association graph.
  
 \begin_inset Formula $V_{LFM}^{t}$
 \end_inset
@@ -1579,8 +1584,8 @@ To combine the motion information and local invariant feature information
  for all objects and blobs, different from strategy above, we can match
  all objects and blobs in Hungarian algorithm.
  This strategy will be helpful when the feature points matching is not robust
- and we add edge for the final graph, which mean a more complex model for
- occlusion.
+ and we add more edges for the final graph, which means a more complex model
+ for occlusion.
  In math format we have:
 \begin_inset Formula 
 \begin{align*}
@@ -1630,14 +1635,14 @@ G^{t}=G_{HA}^{t}\cup G_{LFM}^{t}=(V_{HA}^{t}\cup V_{LFM}^{t},E_{HA}^{t}\cup E_{L
 \end_layout
 
 \begin_layout Standard
-When the assignment results for both method is high accuracy but low recall,
+When the assignment results for both methods are high accuracy but low recall,
  we should choose the combination of 2.
  When the assignment results for Local Invariant Feature matching is low
  accuracy but high recall, while the assignment results for Hungarian algorithm
  is high accuracy but low recall, we should choose the combination of 3.
  In our implementation, we ensure the Local Invariant Feature matching with
  high accuracy.
- First we filter the matches with ratio test and symmetry test according
+ First, we filter the matches with ratio test and symmetry test according
  to 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1646,7 +1651,7 @@ key "tuytelaars2008local"
 \end_inset
 
 .
- Second we filter out the matches with distance radius which bigger than
+ Second, we filter out the matches with distance radius which bigger than
  a threshold 
 \begin_inset Formula $T_{maxMatchDistance}$
 \end_inset
@@ -1657,8 +1662,8 @@ key "tuytelaars2008local"
  We use only motion information for Hungarian algorithm, without color and
  appearance information.
  Thus we can match objects when their color and appearance change while
- be tracked.
- Use motion information only make Hungarian algorithm with low accuracy
+ they are tracked.
+ Using motion information only makes Hungarian algorithm with low accuracy
  but high accuracy.
  So we choose the combination of 1 for the final assignment.
 \end_layout
@@ -1804,17 +1809,17 @@ For association type of
 \end_layout
 
 \begin_layout Enumerate
-If a blob have enough distance 
+If a blob has enough distance 
 \begin_inset Formula $T_{splitDistance}$
 \end_inset
 
  with other blobs, we split it out.
  This is the case for many objects with different destinations.
- However, we need notice the distance threshold is depend on the size of
- objects, the angle of camera, the speed of objects, the frame rate of video,
- the size of frame and the distance between camera and objects.
+ However, we need to notice the distance threshold depends on the size of
+ objects, the angle of cameras, the speed of objects, the frame rate of
+ videos, the size of frames and the distance between cameras and objects.
  And in current dataset MOT2015, the annotation shape of objects and blobs
- is rectangle only, so the shape can also have influence on the distance
+ is rectangle only, so the shape can also have an influence on the distance
  threshold.
 \end_layout
 
@@ -1824,10 +1829,10 @@ If two blobs have been split for enough times
 \end_inset
 
 , we split them.
- We avoid use the split time to split two blobs but times.
- Because it's often the case that an objects linger on background cluster,
- which cause the false negative for foreground mask and the split of objects.
- To avoid this problem, we prefer to use the split times while objects is
+ We avoid using the split time to split two blobs but times.
+ Because it's often the case that an object lingers on background cluster,
+ which causes the false negative for foreground mask and the split of objects.
+ To avoid this problem, we prefer to use the split times while objects are
  moving than to predict the lingering time on background cluster for objects.
  A case for this is two friend go together, the foreground mask of them
  will split and merge often when they are moving.
@@ -1845,7 +1850,7 @@ If two or more blobs come from faraway to nearby, the foreground mask for
 \begin_layout Enumerate
 For all of the blobs split out, we set their status to avoid them merge
  with the object that associated with them.
- This strategy is mean to avoid split and merge loop.
+ This strategy is meant to avoid split and merge loop.
 \end_layout
 
 \begin_layout Standard
@@ -1853,26 +1858,26 @@ For
 \begin_inset Formula $A_{5}$
 \end_inset
 
-, we merge only when:
+, we merge objects only when:
 \end_layout
 
 \begin_layout Enumerate
 The objects are fresh.
- This mean we do not merge objects for long time, and we prefer to use the
- lifetime of objects rather than the position of objects to filter objects
+ This means we do not merge objects for a long time, and we prefer to use
+ the lifetime of objects rather than the position of objects to filter objects
  which can be merged.
- Because it's often the case that objects can come from area which is not
- the border of frame.
+ Because it's often the case that objects can come from an area which is
+ not the border of the frame.
 \end_layout
 
 \begin_layout Enumerate
-The objects are not marked by split operation, as we mentioned above, we
- avoid split and merge loop.
+The objects are not marked by a split operation, as we mentioned above,
+ we avoid split and merge loop.
 \end_layout
 
 \begin_layout Enumerate
 The object's trajectory can be merged.
- This mean the objects should stay closed enough from the first time two
+ This means the objects should stay closed enough from the first time two
  objects both appeared in frames.
 \end_layout
 
@@ -2050,8 +2055,8 @@ reference "tab:Tracking-Evaluation"
 .
  Note we do not use the Sherb and Ren-L dataset because those two dataset
  use mask to remove noise area for background subtraction area.
- To compare those two algorithm in the same level, we choose the same background
- subtraction algorithm LOBSTER 
+ To compare those two algorithms in the same level, we choose the same backgroun
+d subtraction algorithm LOBSTER 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "st2014improving"
@@ -2059,7 +2064,7 @@ key "st2014improving"
 \end_inset
 
 .
- In our experiment we find LOBSTER is slow and MultiCueBGS 
+ In our experiment, we find LOBSTER is slow and MultiCueBGS 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "noh2012new"
@@ -2068,7 +2073,7 @@ key "noh2012new"
 
  have the competitive result with LOBSTER but faster speed.
  So we proposed to use MultiCueBGS as the background subtraction algorithm.
- The feature detect algorithm and extract algorithm are BRISK 
+ The feature detecting algorithm and extracting algorithm is BRISK 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "leutenegger2011brisk"
@@ -2092,7 +2097,7 @@ key "Bernardin2008Evaluatingmultipleobjecttrackingperformance:theCLEARMOTmetrics
 \end_inset
 
 .
- Smaller MOTP and larger MOTA mean better result.
+ Smaller MOTP and larger MOTA mean a better result.
 \end_layout
 
 \begin_layout Standard
@@ -2115,7 +2120,7 @@ name "tab:Tracking-Evaluation"
 
 , the Urban Tracker here use LOBSTER as the background subtraction algorithm
  in tracking, which is the proposed algorithm from in source code.
- Our Method 1 use LOBSTER but Our Method 2 use MultiCueBGS.
+ Our Method 1 uses LOBSTER but Our Method 2 uses MultiCueBGS.
 \end_layout
 
 \end_inset
@@ -2853,7 +2858,7 @@ the times threshold to split objects
 \begin_inset Text
 
 \begin_layout Plain Layout
-the lifetime threshold to determine wheater a object is fresh when merge
+the lifetime threshold to determine wheater an object is fresh when merging
  them
 \end_layout
 
@@ -2909,15 +2914,15 @@ Conclusions
 \end_layout
 
 \begin_layout Standard
-We proposed a tracking by weak segmentation system to tracking all kinds
- of object under various environment.
- Experiment result show that our algorithm is more robust than current state-of-
-art tracker.
+We proposed a tracking by weak segmentation system to track all kinds of
+ objects under various environment.
+ Experiment result shows that our algorithm is more robust than the current
+ state-of-art tracker.
  We combine Hungarian Algorithm and Local Feature Matching to offer robust
  tracking result, use mark and novel status to distinguish split blobs from
  merged blobs.
  Both background subtraction error and occlusion are considered by our method
- and our experiment result prove it.
+ and our experiment result proves it.
 \end_layout
 
 \begin_layout Section*

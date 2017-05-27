@@ -1,0 +1,44 @@
+Reviewer 6 of SMC 2017 submission 337
+
+Comments to the author
+======================
+
+Paper Summary:
+The authors propose a real-time tracking system based on
+weak segmentation. Their method uses state-of-art
+background subtraction methods to handle weak segmentation,
+then utilises weak segmentation results with local
+invariant feature to attain robust object association.
+Furthermore, they propose a status machine to convert
+temporary object association into long-term object
+tracking.
+
+Paper Strengths:
+* The proposed system is clearly explained. 
+
+* The experiment is credible. 
+
+* The results show that the proposed method is by some
+means better than the state-of-the-art methods.
+
+
+
+Paper Weaknesses:
+* The novelty is insufficient.
+* Many grammar errors exist in this manuscript which affect
+the readability.
+
+
+
+
+Grammar Errors:
+* In the abstract, “we donot classify objects into car”
+should be “we do not classify objects into car”
+
+* In the abstract, in “Many tracking system which based on
+weak segmentation simply combine weak segmentation results
+with Kalman filter, which cannot tracking objects well when
+target moves irregularly”:
+ “which based” should be “which is based”. Moreover, there
+is not “verb” in this sentence.
+*…… 

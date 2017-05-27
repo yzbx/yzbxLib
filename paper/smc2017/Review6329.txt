@@ -1,0 +1,36 @@
+Reviewer 5 of SMC 2017 submission 337
+
+Comments to the author
+======================
+
+In this paper, the authors focus on studying a real-time
+tracking system to track objects in videos. Along this
+line, the authors utilize background subtraction methods to
+accomplish weak segmentation at first, and then
+incorporates weak segmentation results with local invariant
+feature to create robust object association. The
+experimental result shows the superiority of the proposed
+method. In conclusion, I hold the view that the paper
+should be accepted.
+
+
+The advantages of this paper are:
+1. The authors propose a real-time tracking system based on
+weak segmentation for object tracking.
+2. For the problem that many tracking systems can't track
+objects well when target moves irregularly, the authors
+incorporate weak segmentation results with local invariant
+feature to acquire robust object association.
+3. The experimental result shows that the proposed method
+outperforms the state-of-art tracking by weak segmentation
+algorithms.
+
+
+There are also some disadvantages:
+1. The figures are not vector diagrams, and the first
+letter of the name of figure 2 should be capitalized.
+2. It will be better to summary the shortcomings of the
+existing works and highlight the characteristics of this
+work especially in the section of "previous work".
+3. There are some grammatical mistakes like "The experiment
+show our algorithm" and so on.
