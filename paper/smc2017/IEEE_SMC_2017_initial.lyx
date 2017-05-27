@@ -348,11 +348,10 @@ Object Tracking is an important task in Computer Vision, which has gained
  In this paper, we propose a real-time tracking system based on weak segmentatio
 n.
  Different from general tracking by detection systems, we do not classify
- objects into car, cat, bike or other things before tracking, instead we
- just classify the image into object area and non-object area before tracking.
- Many tracking systems which based on weak segmentation simply combine weak
- segmentation results with Kalman filter, which cannot track objects well
- when the target moves irregularly.
+ objects into car, cat or bike, instead we just classify the image into
+ object area and non-object area.
+ Many tracking systems simply combine weak segmentation results with Kalman
+ filter, which cannot track objects well when the target moves irregularly.
  In this paper, we use state-of-art background subtraction methods to accomplish
  weak segmentation and incorporates weak segmentation results with the local
  invariant feature to create robust object association, finally we proposal
@@ -402,10 +401,9 @@ key "huang2014surveillance"
 \end_inset
 
  and the number of Videos is increasing every day.
- To use the information hidden in those mass data, A nature way is to do
- objects classification, find object's location and re-identification objects
- in image sequences, finally transform the mass video information into short
- text description or statistic graph.
+ To use the information hidden in those mass data, A nature way is to detect
+ and re-identification objects in image sequences, then transform the mass
+ video information into short text description and statistic graph.
  In this paper, we focus on the tracking system, which offers information
  for object's location and the re-identification information in image sequences.
  In recent years, many researchers have made significant progress in tracking
@@ -417,8 +415,7 @@ key "Redmon2016YouOL,Girshick2015FastR,Liu2016SSDSS,Redmon2016YOLO9000BF"
 
 \end_inset
 
- which make great progress in real-time and high accuracy object detection
- methods.
+.
  For tracking by segmentation system, there are 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -634,21 +631,17 @@ tracking by weak segmentation: weak segmentation cannot distinguish targets
 \end_layout
 
 \begin_layout Standard
-For the consideration of real-time applications, tracking by weak segmentation
- is the fastest.
- To apply tracking algorithm, we simply need to know what's object and what's
- not.
+To apply tracking algorithm, we classify image into object areas and non-object
+ areas and seperate object areas from each other.
  Then according to the similarity of objects in adjacent images, we associate
  them in entire sequence.
  In this paper, we integrate background subtraction, Kalman Filter and local
  invariant feature into a bi-graph model to implement real-time object tracking
  system.
- Assuming input image sequences into our system, the output is the trajectory
- of each object in image sequences.
- background subtraction here does the weak segmentation task by converting
- the input image into a binary mask; Kalman Filter here offer basic location
- prediction and Local Invariant Feature here offer object feature to associate
- the object with adjacent images.
+ The Background subtraction does the weak segmentation task by converting
+ the input image into a binary object areas mask; The Kalman Filter offer
+ basic location prediction and the Local Invariant Feature offer object
+ features to associate the object in adjacent images.
 \end_layout
 
 \begin_layout Standard
@@ -665,9 +658,7 @@ key "Babaee2017ADC"
 
 \end_inset
 
-, but the shadow of objects, dynamic background and intermittent motion
- of objects remain challenging for state-of-art foreground segmentation
- methods.
+.
 \end_layout
 
 \begin_layout Standard
