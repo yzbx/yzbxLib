@@ -1,0 +1,2962 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\begin_preamble
+% for subfigures/subtables
+\usepackage[caption=false,font=footnotesize]{subfig}
+\end_preamble
+\options conference
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is a template \SpecialChar LyX
+ file for conference articles of conferences organized
+ by the Institute of Electrical and Electronics Engineers (IEEE).
+ For IEEE journal articles, see the template file 
+\emph on
+IEEEtran-Journal.lyx
+\emph default
+.
+ For general info see 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://wiki.lyx.org/Examples/IEEE
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+It is important that you use the correct document class options for your
+ document..
+ These are explained in the IEEEtran documentation: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://mirror.ctan.org/macros/latex/contrib/IEEEtran/IEEEtran_HOWTO.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+A Tracking by Weak Segmentation System
+\end_layout
+
+\begin_layout Author
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+for more than 3
+\begin_inset space ~
+\end_inset
+
+affiliations use this way: 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Name
+status open
+
+\begin_layout Plain Layout
+JiaXin Wang
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+, CuiXia Ma
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+, Hao Wang
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+and HongAn Wang
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Affiliation
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+School of Computer and Control Engineering
+\begin_inset Newline newline
+\end_inset
+
+University of the Chinese Academy of Sciences
+\begin_inset Newline newline
+\end_inset
+
+Beijing, China
+\begin_inset Newline newline
+\end_inset
+
+Email: wangjiaxin15@mails.ucas.ac.cn
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Affiliation
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+Institute of Software
+\begin_inset Newline newline
+\end_inset
+
+Chinese Academy of Sciences
+\begin_inset Newline newline
+\end_inset
+
+Beijing, China
+\begin_inset Newline newline
+\end_inset
+
+Email: cuixia@iscas.ac.cn
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Affiliation
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+Institute of Software
+\begin_inset Newline newline
+\end_inset
+
+Chinese Academy of Sciences
+\begin_inset Newline newline
+\end_inset
+
+Beijing, China
+\begin_inset Newline newline
+\end_inset
+
+Email: wanghao@iscas.ac.cn
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Affiliation
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+Institute of Software
+\begin_inset Newline newline
+\end_inset
+
+Chinese Academy of Sciences
+\begin_inset Newline newline
+\end_inset
+
+Beijing, China
+\begin_inset Newline newline
+\end_inset
+
+Email: hongan@iscas.ac.cn
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Object Tracking is an important task in Computer Vision, which has gained
+ increasing attention from academia to industry.
+ In this paper we propose a real-time tracking system based on weak segmentation.
+ Different from general tracking by detection system, we donot classify
+ objects into car, cat, bike or other things before tracking, instead we
+ just classify the image into object area and non-object area before tracking.
+ Many tracking system which based on weak segmentation simply combine weak
+ segmentation results with Kalman filter, which cannot tracking objects
+ well when target moves irregularly.
+ In this paper, we use state-of-art background subtraction methods to accomplish
+ weak segmentation, and incorporates weak segmentation results with local
+ invariant feature to create robust object association, finally we proposal
+ a status machine to convert temporary object association into long-term
+ object tracking results.
+ The experiment show our algorithm outperforms the state-of-art tracking
+ by weak segmentation algorithms.
+\end_layout
+
+\begin_layout Peer Review Title
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Don't add text here!
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+required if you use the document class option 
+\family sans
+peerreview
+\family default
+, must otherwise not be used
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Videos in Surveillance system has become the biggest data today 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "huang2014surveillance"
+
+\end_inset
+
+ and the number of Videos are increasing every day.
+ To use the information hidden in those mass data, A nature way is to do
+ objects classification, find object's location and re-identification objects
+ in image sequence, finally transform the mass video information into short
+ text description or statistic graph.
+ In this paper, we focus on tracking system, which offer information for
+ object's location and the re-identification information in image sequence.
+ In recent years, many researchers have made significant progress in tracking
+ system.
+ For tracking by detection system, there are 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Redmon2016YouOL,Girshick2015FastR,Liu2016SSDSS,Redmon2016YOLO9000BF"
+
+\end_inset
+
+ which make great progress in real-time and high accuracy object detection
+ methods.
+ For tracking by segmentation system, there are 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gregorio2014ChangeDW,StCharles2014FlexibleBS,Wang2014AFS,Wang2014StaticAM"
+
+\end_inset
+
+ which make progress in weak segmentation, And there are 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen2014SemanticIS,Badrinarayanan2017SegNetAD,Liu2016DeepLM,Wu2016HighperformanceSS"
+
+\end_inset
+
+ which make progress in semantic segmentation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Object Tracking system Comparison
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="30col%">
+<column alignment="center" valignment="middle" width="25col%">
+<column alignment="center" valignment="middle" width="25col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+system
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+input image
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+before tracking
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tracking by detection: Detection image mainly means using boxes to annotation
+ targets, offer the location and classification information.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gray/gray_detection.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gray/gray_detection-result.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tracking by semantic segmentation: semantic segmentation mainly means segmenting
+ each targets, offer classification information and contour information.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gray/gray_semantic.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gray/gray_semantic-result.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tracking by weak segmentation: weak segmentation cannot distingush targets
+ from targets.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gray/gray_weak.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gray/gray_weak-result.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the consideration of real-time application, tracking by weak segmentation
+ is the fastest.
+ To apply tracking algorithm, we simply need to know what's object and what's
+ not.
+ Then according to the similarity of objects in adjacent images, we associate
+ them in entire sequence.
+ In this paper we integrate background subtraction, Kalman Filter and local
+ invariant feature into bi-graph model to implement real-time object tracking
+ system.
+ Assuming input an image sequence into our system, the output is the trajectory
+ of each objects in image sequence.
+ background subtraction here does the weak segmentation task, by converting
+ input image into binary mask; Kalman Filter here offer basic location predictio
+n and Local Invariant Feature here offer object feature to associate object
+ in adjacent images.
+\end_layout
+
+\begin_layout Standard
+For tracking by weak segmentation system, challenging mainly in accuracy
+ semantic segmentation and association object in adjacent images.
+ For most surveillance video, we can simply use background subtraction algorithm
+ to obtain accuracy foreground segmentation results.
+ In state of art method for background subtraction, the accuracy for foreground
+ segmentation have achieve 0.96 average precision and 0.95 recall for baseline
+ test datasets 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Babaee2017ADC"
+
+\end_inset
+
+, but shadow of object, dynamic background and intermittent motion of objects
+ remain challenging for state-of-art foreground segmentation methods.
+\end_layout
+
+\begin_layout Standard
+Our proposed system include follow steps: 
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Foreground Segmentation: do weak segmentation.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Identify standalone objects: convert weak segmentation into semantic segmentatio
+n
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Association objects in adjacent frames: apply bi-graph model.
+\end_layout
+
+\begin_layout Enumerate
+Convert temporal association results into long-term tracking results: maintain
+ tracking status
+\end_layout
+
+\begin_layout Section
+Previous Work
+\end_layout
+
+\begin_layout Subsection
+Tracking by Detection
+\end_layout
+
+\begin_layout Standard
+A lot of work has been published on tracking by detection system, the detail
+ can be see from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Moussy2015ACV"
+
+\end_inset
+
+,
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Smeulders2014VisualTA"
+
+\end_inset
+
+.
+ By detecting target, associating adjacent target, the tracking by detection
+ system output the trajectory of target.
+ It is found that depending on the choice of the detector, average tracking
+ accuracy could exhibit a 45% standard deviation with only, on average,
+ a 6.8% and 11.1% standard deviation in detector recall and precision respectively
+ according to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Moussy2015ACV"
+
+\end_inset
+
+.
+ For detectors, currently there are Histogram of Oriented Gradients (HOG)
+ based detector 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dalal2005HistogramsOO"
+
+\end_inset
+
+, Deformable Part-based Models (DPM) based detector 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Forsyth2010ObjectDW"
+
+\end_inset
+
+, Aggregate Channel Features (ACF) based detector 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dollr2014FastFP"
+
+\end_inset
+
+ and Region based Convolutional Neural Network(R-CNN) based detector 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Girshick2014RichFH"
+
+\end_inset
+
+.
+ For tracker, the Sequential Monte Carlo based tracker is widely used for
+ that is more suitable for time-critical, online applications 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Breitenstein2009RobustTU"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Tracking by Segmentation
+\end_layout
+
+\begin_layout Standard
+Compare to Tracking by Detection system, work based on Tracking by Segmentation
+ system is rare due to it's very hard to offer accuracy semantic segmentation
+ results.
+ However, for fixed video we can classify image into foreground and background
+ (weak segmentation), when occlusion is rare, we can obtain semantic segmentatio
+n results through connect component analysis.
+ And connect component analysis can be also use in video with regular background
+ movement when combine it with optical flow.
+ In this way tracking can combine with contour information to make results
+ robust.
+ For foreground segmentation, there are Gaussian Mixture Model (GMM) based
+ methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zivkovic2004Improved"
+
+\end_inset
+
+, Kernel Density Estimation (KDE) based methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yoshinaga2013BackgroundMB"
+
+\end_inset
+
+, Self-Organizing Neural Network (SONN) based methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Singh2010ImplementationOA"
+
+\end_inset
+
+ and more foreground segmentation methods detail can be find in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bouwmans2014TraditionalAR"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Adjacent Target Association
+\end_layout
+
+\begin_layout Standard
+Both Tracking by detection and Tracking by Segmentation system need to do
+ adjacent target association.
+ And the features use for association can vary from point to area.
+ Color, Edge, Optical Flow and Texture features are widely used for adjacent
+ target association, combining with partial filter or Kalman filter, a Moravian
+ approach can be established 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Breitenstein2009RobustTU"
+
+\end_inset
+
+.
+ If the feature between objects is big enough and scored, we can also establish
+ an bi-graph model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Huang2008RobustOT"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Methodology
+\end_layout
+
+\begin_layout Subsection
+Overview
+\end_layout
+
+\begin_layout Standard
+As we can see from Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tracking-Algorithm"
+
+\end_inset
+
+.
+ Firstly we split the foreground mask into connect component(we call them
+ foreground blobs later).
+ Next we use Hungarian algorithm with local invariant feature matching to
+ do association between foreground blobs and tracked objects.
+ Next we create the association graph for blobs and tracked objects, we
+ classify node in association graph.
+ For nodes need merge or split, we handle the occlusion and oversegmentation
+ for them; For nodes need new or delete, we update the tracked objects;
+ For nodes need update, we maintain the tracking status for them.
+ Finally, we output the trajectory result for current frame.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/yzbx/Documents/AuthorKit17/AuthorKit17/LaTeX/Overview.jpg
+	lyxscale 50
+	width 100col%
+	groupId Figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tracking-Algorithm"
+
+\end_inset
+
+Our Tracking Algorithm Overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mathematical Symbol and Meaning Overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="40col%">
+<column alignment="center" valignment="top" width="50col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mathematical Symbol 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Meaning
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+frame number, the timestamp for input video, 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I_{input}^{t}(i,j)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pixel at location (i,j) in input frame at time t
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I_{mask}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+image: mask for motion object area
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{width},C_{height}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+width and height of input frame 
+\begin_inset Formula $I_{input}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I_{response}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+image: response of background subtraction
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O_{i}^{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the ith Object in 
+\begin_inset Formula $I_{input}^{t}$
+\end_inset
+
+ (include the missed objects in previous input frames)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{i}^{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the ith Blob in 
+\begin_inset Formula $I_{input}^{t}$
+\end_inset
+
+(only blobs in current input frame)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N_{object}^{t},N_{blob}^{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+objects and blobs Number in 
+\begin_inset Formula $I_{input}^{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+background subtraction
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Motion-Detection"
+
+\end_inset
+
+ show basic system of background subtraction based background model.
+ When 
+\begin_inset Formula $t<1$
+\end_inset
+
+ we initialize the background model, then for the rest of 
+\begin_inset Formula $t\geq1$
+\end_inset
+
+ we update the background model according to input frame and output motion
+ mask.
+ The mask is generated from motion response image by a threshold and the
+ motion response image is calculated by the distance between input frame
+ and background model.
+ 
+\end_layout
+
+\begin_layout Standard
+We have 
+\begin_inset Formula $I_{response}=f_{distance}(I_{input},B_{model})$
+\end_inset
+
+, background model 
+\begin_inset Formula $B_{model}$
+\end_inset
+
+ may not just an image, for example, 
+\begin_inset Formula $B_{model}$
+\end_inset
+
+ can contains 10~50 background images.
+ Distance function 
+\begin_inset Formula $f_{distance}$
+\end_inset
+
+ compute the distance between current input image and background model.
+ And we have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{mask}(i,j)=\begin{cases}
+0 & I_{response}(i,j)>C_{response}\\
+1 & I_{response}(i,j)\leq C_{response}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{response}$
+\end_inset
+
+ is the threshold for motion response image 
+\begin_inset Formula $I_{response}$
+\end_inset
+
+.
+ According the the benchmark and survey
+\begin_inset CommandInset citation
+LatexCommand citep
+key "goyette2012changedetection"
+
+\end_inset
+
+, we choose MultiCueBGS 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "noh2012new"
+
+\end_inset
+
+ as our background subtraction method for it's advantage on speed and it's
+ good resistance to background noise, light change.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/yzbx/Documents/AuthorKit17/AuthorKit17/LaTeX/motionDetection.jpg
+	lyxscale 50
+	width 100col%
+	groupId Figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+background subtraction
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Motion-Detection"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Identify Objects In Current Frame
+\end_layout
+
+\begin_layout Standard
+Because there may be two or more objects in 
+\begin_inset Formula $I_{input}^{t}$
+\end_inset
+
+, we need to identify each object alone.
+ By use Connect Component Analysis algorithm we can get 
+\begin_inset Formula $N_{blob}^{t}$
+\end_inset
+
+ connect component in 
+\begin_inset Formula $I_{input}^{t}$
+\end_inset
+
+ and due to the false negative and false positive in 
+\begin_inset Formula $I_{mask}^{t}$
+\end_inset
+
+, the number of connect component may not equal to the number of objects
+ 
+\begin_inset Formula $N_{object}^{t}$
+\end_inset
+
+.
+ Two or more blob may come from the same object and one blob may contain
+ two or more object too.
+ In addition, there are pure noise blob as well.
+ We use a area threshold 
+\begin_inset Formula $C_{area}$
+\end_inset
+
+ to remove small blob and extract the center position for each remain blob.
+\end_layout
+
+\begin_layout Subsection
+Association Objects in Adjacent Frames
+\end_layout
+
+\begin_layout Standard
+We have to assign blobs to objects, which can be see as an assignment problem.
+ If we suppose one blob only corresponds to one object, we can use Hungarian
+ Algorithm to do this.
+ However, above suppose is not true for most of time and we need to assign
+ two or more blobs to one object and assign two or more objects to one blob.
+ So we use local invariant feature to extend the Hungarian algorithm and
+ deal the situation of object merge and split.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/yzbx/Documents/AuthorKit17/AuthorKit17/LaTeX/assignment.jpg
+	lyxscale 50
+	width 100col%
+	groupId Figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Assignment example
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Assignment-example"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we can see from Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Assignment-example"
+
+\end_inset
+
+, the assignment between objects and blobs have 5 type: split, merge, normal,
+ miss and new; object 7 split into blob 1 and blob 0, object 8 normally
+ matched to blob2, object 9 and object 10 merged into blob3, object 11 and
+ blob 4 have no matched blob/object.
+ For object we called it's missing and for blob we need to new an object
+ to match it.
+ For a long period video tracking, the object may disappear.
+ 
+\end_layout
+
+\begin_layout Subsection
+Create Object Association Graph
+\end_layout
+
+\begin_layout Standard
+Though use Hungarian Algorithm alone cannot deal with the problem of split
+ and merge.
+ However in most of time, Hungarian Algorithm can do right thing and we
+ proposed to deal with split and merge alone with invariant local feature.
+ For objects 
+\begin_inset Formula $O_{i}^{t},i\in[1,N_{object}^{t}]$
+\end_inset
+
+ and blobs 
+\begin_inset Formula $B_{i}^{t},i\in[1,N_{blob}^{t}]$
+\end_inset
+
+ we get the cost matrix: 
+\begin_inset Formula 
+\begin{align*}
+ & \left[\begin{array}{cc}
+d & diag(d^{new})\\
+diag(d^{miss}) & 0
+\end{array}\right]\\
+= & \left[\begin{array}{cccccc}
+d_{11} & \cdots & d_{1N} & d_{1}^{new} & \cdots & +\infty\\
+\vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\
+d_{M1} & \cdots & d_{MN} & +\infty & \cdots & d_{M}^{new}\\
+d_{1}^{miss} & \cdots & +\infty & 0 & \cdots & 0\\
+\vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\
++\infty & \cdots & d_{N}^{miss} & 0 & \cdots & 0
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+here 
+\begin_inset Formula $d$
+\end_inset
+
+ is the distance matrix for 
+\begin_inset Formula $O_{i}^{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{i}^{t}$
+\end_inset
+
+ where 
+\begin_inset Formula $d_{ij}=distance(B_{i}^{t},O_{j}^{t})$
+\end_inset
+
+, and 
+\begin_inset Formula $M=N_{blob}^{t},N=N_{object}^{t}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $d_{i}^{miss},d_{j}^{new},i\in[1,N],j\in[1,M]$
+\end_inset
+
+ are the cost for a missing object i or the cost for a new object to match
+ blob j.
+ Use Hungarian Algorithm to address the assignment problem we can get the
+ blobs need to match new objects, the objects missed and the normal match
+ information between the objects and blobs.
+ However, Hungarian Algorithm cannot obtain the occlusion information, which
+ is a common thing often happened in tracking system.
+ Normally, there are three ways to obtain the occlusion information when
+ combine Local Feature Matching and Hungarian algorithm.
+ For blobs which need matching new objects, we use local invariant feature
+ to find whether it is the split of existed object.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Using Local Feature Matching first, we can obtain the association between
+ blobs.
+ Because each blob may two or more blobs which have enough matched feature
+ points with it, we can obtain occlusion information from Local Feature
+ Matching alone.
+ However, for smooth object or small object which has few feature points,
+ it often does not has enough feature points, so use Local Feature Matching
+ alone, the smooth object and small object cannot be tracked well.
+ So for missed objects or the blobs unmatched after Local Feature Matching,
+ we use Hungarian algorithm to tracking them.
+ This strategy can be see a
+\begin_inset Formula 
+\begin{align*}
+G_{LFM}^{t} & =LFM(O^{t},B^{t})=(V_{LFM}^{t},E_{LFM}^{t})\\
+O^{t} & =\{O_{i}^{t}|i\in[1,N_{object}^{t}]\}\\
+B^{t} & =\{B_{i}^{t}|i\in[1,N_{blob}^{t}]\}\\
+B_{\lnot LFM}^{t} & =\{v|v\in B^{t},\forall u\in O^{t},<u,v>\notin E_{LFM}^{t}\}\\
+O_{\lnot LFM}^{t} & =\{u|u\in O^{t},\forall v\in B^{t},<u,v>\notin E_{LFM}^{t}\}\\
+G_{HA}^{t} & =HA(O_{\lnot LFM}^{t},B_{\lnot LFM}^{t})=(V_{HA}^{t},E_{HA}^{t})
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula $O^{t}$
+\end_inset
+
+ is the object set and 
+\begin_inset Formula $B^{t}$
+\end_inset
+
+ is the blob set for frame 
+\begin_inset Formula $I_{input}^{t}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{LFM}^{t}$
+\end_inset
+
+ is the matches of Local Feature Matching, we map each matches as edge in
+ our association graph.
+ 
+\begin_inset Formula $V_{LFM}^{t}$
+\end_inset
+
+ is the vertex for graph.
+ 
+\begin_inset Formula $G_{LFM}^{t}$
+\end_inset
+
+ is the association graph for Local Feature Matching and 
+\begin_inset Formula $G_{HA}^{t}$
+\end_inset
+
+ for Hungarian Algorithm.
+ 
+\begin_inset Formula $B_{\lnot LFM}^{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $O_{\lnot LFM}^{t}$
+\end_inset
+
+ are the remain blobs and objects, we use them as input for Hungarian Algorithm
+ which denote as 
+\begin_inset Formula $G_{HA}^{t}=HA(O_{\lnot LFM}^{t},B_{\lnot LFM}^{t})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+To combine the motion information and local invariant feature information
+ for all objects and blobs, different from strategy above, we can match
+ all objects and blobs in Hungarian algorithm.
+ This strategy will be helpful when the feature points matching is not robust
+ and we add edge for the final graph, which mean a more complex model for
+ occlusion.
+ In math format we have:
+\begin_inset Formula 
+\begin{align*}
+G_{HA}^{t} & =HA(O^{t},B^{t})=(V_{HA}^{t},E_{HA}^{t})\\
+G_{LFM}^{t} & =LFM(O^{t},B^{t})=(V_{LFM}^{t},E_{LFM}^{t})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For case where motion information is more robust than feature matching,
+ for example, many car of the same type.
+ We can use Hungarian algorithm first and then use feature point matching
+ for the rest, in this case, we have:
+\begin_inset Formula 
+\begin{align*}
+G_{HA}^{t} & =HA(O^{t},B^{t})=(V_{HA}^{t},E_{HA}^{t})\\
+G_{LFM}^{t} & =LFM(O_{\lnot HA}^{t},B_{\lnot HA}^{t})=(V_{LFM}^{t},E_{LFM}^{t})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, the association graph is the combine of 
+\begin_inset Formula $G_{HA}^{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{LFM}^{t}$
+\end_inset
+
+, in math format is:
+\begin_inset Formula 
+\[
+G^{t}=G_{HA}^{t}\cup G_{LFM}^{t}=(V_{HA}^{t}\cup V_{LFM}^{t},E_{HA}^{t}\cup E_{LFM}^{t})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When the assignment results for both method is high accuracy but low recall,
+ we should choose the combination of 2.
+ When the assignment results for Local Invariant Feature matching is low
+ accuracy but high recall, while the assignment results for Hungarian algorithm
+ is high accuracy but low recall, we should choose the combination of 3.
+ In our implementation, we ensure the Local Invariant Feature matching with
+ high accuracy.
+ First we filter the matches with ratio test and symmetry test according
+ to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tuytelaars2008local"
+
+\end_inset
+
+.
+ Second we filter out the matches with distance radius which bigger than
+ a threshold 
+\begin_inset Formula $T_{maxMatchDistance}$
+\end_inset
+
+, this avoid unexpected matches with two faraway feature points.
+ Finally, we do Hungarian algorithm on rest unmatched objects and unmatched
+ blobs.
+ We use only motion information for Hungarian algorithm, without color and
+ appearance information.
+ Thus we can match objects when their color and appearance change while
+ be tracked.
+ Use motion information only make Hungarian algorithm with low accuracy
+ but high accuracy.
+ So we choose the combination of 1 for the final assignment.
+\end_layout
+
+\begin_layout Subsection
+Handle Occlusion
+\end_layout
+
+\begin_layout Standard
+For those unmatched object and blob, we local invariant feature to match
+ them.
+ If the matched point more than 3, we accept that match and else we reject
+ it.
+ As we can see from Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Oclussion-handle"
+
+\end_inset
+
+, the edge label 
+\begin_inset Quotes eld
+\end_inset
+
+LIF
+\begin_inset Quotes erd
+\end_inset
+
+ mean Local Invariant Feature matching for object and blob, 
+\begin_inset Quotes eld
+\end_inset
+
+Hun
+\begin_inset Quotes erd
+\end_inset
+
+ mean Hungarian algorithm matching.
+ Then we will store the status of merge object 2 and object 3.
+ However, the object 5 split into blob 3 and blob 4, and we will create
+ new object 6 and object 7 to match blob 3 and blob 4.
+ The ways to handle each objects and blobs depends on their type and status,
+ we classify the association result as follow type:
+\end_layout
+
+\begin_layout Enumerate
+Blobs without associated objects
+\begin_inset Formula 
+\[
+A_{1}=\{v|v\in B^{t},\forall u\in O^{t},<u,v>\notin E(G^{t})\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Objects without associated blobs.
+\begin_inset Formula 
+\[
+A_{2}=\{u|u\in O^{t},\forall v\in B^{t},<u,v>\notin E(G^{t})\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Objects associated with one and only one blob.
+\begin_inset Formula 
+\begin{align*}
+O(u) & =\{u|\exists v\in B^{t},<u,v>\in E(G^{t})\}\\
+A_{3} & =\{u|\left\Vert O(u)\right\Vert =1\}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Objects associated with two or more blobs.
+\begin_inset Formula 
+\[
+A_{4}=\{u|\left\Vert O(u)\right\Vert >1\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Blobs associated with two or more objects.
+\begin_inset Formula 
+\begin{align*}
+B(v) & =\{v|\exists u\in O^{t},<u,v>\in E(G^{t})\}\\
+A_{5} & =\{v|\left\Vert B(v)\right\Vert >1\}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For association type of 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ we create new objects to track, we denote those new objects as 
+\begin_inset Formula $New(A_{1})$
+\end_inset
+
+, operation on 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ convert blobs to objects; For 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ we update the tracking status for them, for objects which cannot get associated
+ blobs for long time (
+\begin_inset Formula $>T_{maxMissTimes}$
+\end_inset
+
+), we will remove them.
+ For convenience we denote those delete objects as 
+\begin_inset Formula $Delete(A_{2})$
+\end_inset
+
+; For 
+\begin_inset Formula $A_{3}$
+\end_inset
+
+ we just update the tracking status for them; For 
+\begin_inset Formula $A_{4}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+If a blob have enough distance 
+\begin_inset Formula $T_{splitDistance}$
+\end_inset
+
+ with other blobs, we split it out.
+ This is the case for many objects with different destinations.
+ However, we need notice the distance threshold is depend on the size of
+ objects, the angle of camera, the speed of objects, the frame rate of video,
+ the size of frame and the distance between camera and objects.
+ And in current dataset MOT2015, the annotation shape of objects and blobs
+ is rectangle only, so the shape can also have influence on the distance
+ threshold.
+\end_layout
+
+\begin_layout Enumerate
+If two blobs have been split for enough times 
+\begin_inset Formula $T_{splitTimes}$
+\end_inset
+
+, we split them.
+ We avoid use the split time to split two blobs but times.
+ Because it's often the case that an objects linger on background cluster,
+ which cause the false negative for foreground mask and the split of objects.
+ To avoid this problem, we prefer to use the split times while objects is
+ moving than to predict the lingering time on background cluster for objects.
+ A case for this is two friend go together, the foreground mask of them
+ will split and merge often when they are moving.
+\end_layout
+
+\begin_layout Enumerate
+If two or more blobs come from faraway to nearby, the foreground mask for
+ them may split.
+ To address this problem, we need to detect the size change of objects,
+ when the size of objects increase with time, and finally the objects associated
+ with two or more objects, we split them out.
+ 
+\end_layout
+
+\begin_layout Enumerate
+For all of the blobs split out, we set their status to avoid them merge
+ with the object that associated with them.
+ This strategy is mean to avoid split and merge loop.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $A_{5}$
+\end_inset
+
+, we merge only when:
+\end_layout
+
+\begin_layout Enumerate
+The objects are fresh.
+ This mean we do not merge objects for long time, and we prefer to use the
+ lifetime of objects rather than the position of objects to filter objects
+ which can be merged.
+ Because it's often the case that objects can come from area which is not
+ the border of frame.
+\end_layout
+
+\begin_layout Enumerate
+The objects are not marked by split operation, as we mentioned above, we
+ avoid split and merge loop.
+\end_layout
+
+\begin_layout Enumerate
+The object's trajectory can be merged.
+ This mean the objects should stay closed enough from the first time two
+ objects both appeared in frames.
+\end_layout
+
+\begin_layout Standard
+As mentioned above, we denote the split object in 
+\begin_inset Formula $A_{4}$
+\end_inset
+
+ as 
+\begin_inset Formula $Delete(A_{4})$
+\end_inset
+
+ and the split blobs in 
+\begin_inset Formula $A_{4}$
+\end_inset
+
+ as 
+\begin_inset Formula $New(A_{4})$
+\end_inset
+
+, the merged blobs in 
+\begin_inset Formula $A_{5}$
+\end_inset
+
+ as 
+\begin_inset Formula $New(A_{5})$
+\end_inset
+
+ and the merged objects in 
+\begin_inset Formula $A_{5}$
+\end_inset
+
+ as 
+\begin_inset Formula $Delete(A_{5})$
+\end_inset
+
+.
+ Finally we have:
+\begin_inset Formula 
+\begin{align*}
+O^{t+1} & =Update(O^{t})+New(A_{1})-Delete(A_{2})\\
+ & +New(A_{4})-Delete(A_{4})+New(A_{5})-Delte(A_{5})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/yzbx/Documents/AuthorKit17/AuthorKit17/LaTeX/HandleOcclusion.jpg
+	lyxscale 50
+	width 100col%
+	groupId Figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Association type example
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Oclussion-handle"
+
+\end_inset
+
+: 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+={blob 5}, 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+={object 1},
+\begin_inset Formula $A_{3}$
+\end_inset
+
+={object 4},
+\begin_inset Formula $A_{4}$
+\end_inset
+
+={object 5},
+\begin_inset Formula $A_{5}$
+\end_inset
+
+={blob 1}.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output002.png
+	lyxscale 50
+	width 50col%
+	groupId 2Figure
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename output004.png
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tracking results on Urban Tracker Dataset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We run our algorithm on Urban Tracker Dataset
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jodoin2014urbanTracker"
+
+\end_inset
+
+, we can see our result in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Tracking-Evaluation"
+
+\end_inset
+
+.
+ Note we do not use the Sherb and Ren-L dataset because those two dataset
+ use mask to remove noise area for background subtraction area.
+ To compare those two algorithm in the same level, we choose the same background
+ subtraction algorithm LOBSTER 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "st2014improving"
+
+\end_inset
+
+.
+ In our experiment we find LOBSTER is slow and MultiCueBGS 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noh2012new"
+
+\end_inset
+
+ have the competitive result with LOBSTER but faster speed.
+ So we proposed to use MultiCueBGS as the background subtraction algorithm.
+ The feature detect algorithm and extract algorithm are BRISK 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "leutenegger2011brisk"
+
+\end_inset
+
+ and FREAK 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alahi2012freak"
+
+\end_inset
+
+, which is proposed in Urban Tracker.
+ The two main evaluation metric are Multiple Object Tracking Precision(MOTP)
+ and Multiple Object Tracking Accuracy(MOTA) in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Bernardin2008Evaluatingmultipleobjecttrackingperformance:theCLEARMOTmetrics"
+
+\end_inset
+
+.
+ Smaller MOTP and larger MOTA mean better result.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tracking Evaluation on Urban Tracker Dataset 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Tracking-Evaluation"
+
+\end_inset
+
+, the Urban Tracker here use LOBSTER as the background subtraction algorithm
+ in tracking, which is the proposed algorithm from in source code.
+ Our Method 1 use LOBSTER but Our Method 2 use MultiCueBGS.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="10col%">
+<column alignment="center" valignment="middle" width="7col%">
+<column alignment="center" valignment="middle" width="7col%">
+<column alignment="center" valignment="middle" width="7col%">
+<column alignment="center" valignment="middle" width="7col%">
+<column alignment="center" valignment="middle" width="7col%">
+<column alignment="center" valignment="middle" width="7col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+video
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="20col%">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Urban Tracker
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="20col%">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Our Method 1
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="20col%">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Our Method 2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MOTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MOTP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MOTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MOTP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MOTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MOTP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Atrium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.59
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+77.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.65 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+70.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.62 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+70.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Rouen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+-0.18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+71.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.44
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+69.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.43
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+69.1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+st-Marc
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+73.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.53
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+63.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.51
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+63.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+average
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+74.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.54
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+67.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.52
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+67.4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Our method's parameter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="50col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+detail
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D_{i}^{miss},D_{i}^{new}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the distance threshold for Hungarian Algorithm 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{maxMissTimes}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the max miss times for objects before removed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{area}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the area threshold to remove small noise foreground mask
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{splitDistance}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the distance threshold to split objects
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{splitTimes}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the times threshold to split objects
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{fresh}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the lifetime threshold to determine wheater a object is fresh when merge
+ them
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{maxMatchDistance}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the max distance for matched feature points
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+We proposed a tracking by weak segmentation system to tracking all kinds
+ of object under various environment.
+ Experiment result show that our algorithm is more robust than current state-of-
+art tracker.
+ We combine Hungarian Algorithm and Local Feature Matching to offer robust
+ tracking result, use mark and novel status to distinguish split blobs from
+ merged blobs.
+ Both background subtraction error and occlusion are considered by our method
+ and our experiment result prove it.
+\end_layout
+
+\begin_layout Section*
+Acknowledgment
+\end_layout
+
+\begin_layout Standard
+This work was supported by the National Key Research and Development Plan
+ under Grant 2016YFB1001200, the Natural Science Foundation of China under
+ Grant U1435220, Grant 61232013.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Remember though that your final submission is supposed to have all the bibliogra
+phy entries embedded in the \SpecialChar LaTeX
+-file.
+ This means you eventually have to copy the .bbl file into the latex file
+ and remove the bibtex lines.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "smc"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
