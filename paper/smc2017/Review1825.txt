@@ -1,0 +1,22 @@
+Reviewer 1 of SMC 2017 submission 337
+
+Comments to the author
+======================
+
+This paper seems to propose a new network with the second
+order distance. I have the following comments.
+
+Comment 1:
+
+The writing of the paper is not up to the standard, too
+many places with unclear description due to the obstacle of
+English writing, for example quoted “….. based on balance
+theory ….”; not sure about what ‘balance theory’.
+
+Comment 2:
+
+The introduction is poorly written; there are many
+different types of networks in literature, e.g. social
+network with its application. Not sure about the
+relationship of the network discussed in this manuscript
+with other networks. 

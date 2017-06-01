@@ -1,0 +1,10 @@
+Reviewer 3 of SMC 2017 submission 337
+
+Comments to the author
+======================
+
+Interesting topic. Solution is presented in appropriate
+structure. Some improvements are advised. Comparison with
+the existing methods is too general including references.
+More definite benefits over the similar results are advised
+to include. Improving English is necessary.  
