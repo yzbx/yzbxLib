@@ -1,0 +1,1 @@
+./darknet detector test cfg/helmet_seatbelt/config/yzbx_helmet.data cfg/helmet_seatbelt/config/tiny-yolo-helmet_seatbelt.cfg backup/tiny-yolo-helmet_seatbelt_final.weights /media/sdb/ISCAS_Dataset/helmet_seatbelt/seatbelt/JPEGImages/$1.jpg
