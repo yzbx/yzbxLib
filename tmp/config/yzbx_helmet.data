@@ -1,0 +1,6 @@
+classes= 3
+train  = /media/sdb/ISCAS_Dataset/helmet_seatbelt/train_seatbelt.txt
+valid  = /media/sdb/ISCAS_Dataset/helmet_seatbelt/test_seatbelt.txt
+names = /media/sdb/ISCAS_Dataset/helmet_seatbelt/config/yzbx_helmet.names
+backup = backup
+
