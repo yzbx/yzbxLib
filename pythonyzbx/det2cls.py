@@ -9,7 +9,9 @@ def det2cls(root,sets,output_dir='classification'):
     img_formats = ['jpg', 'JPG', 'png', 'PNG', 'jpeg', 'JPEG']
     img_target_format = 'jpg'
     abs_output_dir=os.path.join(root,output_dir)
-    os.makedirs(abs_output_dir)
+
+    if not os.path.exists(abs_output_dir):
+        os.makedirs(abs_output_dir)
     i = 1
     namelist=[]
     for set in sets:
@@ -42,7 +44,9 @@ def det2cls(root,sets,output_dir='classification'):
 
                     if name not in namelist:
                         namelist.append(name)
-                        os.mkdir(os.path.join(abs_output_dir,name))
+                        name_cls_dir=os.path.join(abs_output_dir,name)
+                        if not os.path.exists(name_cls_dir):
+                            os.mkdir(name_cls_dir)
 
                     save_image_filename=os.path.join(abs_output_dir,name,str(i)+'.'+img_target_format)
                     full_image=cv2.imread(img_file)
@@ -55,5 +59,5 @@ def det2cls(root,sets,output_dir='classification'):
 
 if __name__ == '__main__':
     root = '/media/sdb/ISCAS_Dataset/crab/TFFRCNN'
-    sets = ['3c']
+    sets = ['cls']
     det2cls(root,sets)
