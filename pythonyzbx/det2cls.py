@@ -12,7 +12,11 @@ def det2cls(root,sets,output_dir='classification'):
 
     if not os.path.exists(abs_output_dir):
         os.makedirs(abs_output_dir)
+
+    # number of xml file
     i = 1
+    # number of image file for classfication
+    j = 1
     namelist=[]
     for set in sets:
         xml_dir = os.path.join(root, set, subdirs[0])
@@ -48,14 +52,15 @@ def det2cls(root,sets,output_dir='classification'):
                         if not os.path.exists(name_cls_dir):
                             os.mkdir(name_cls_dir)
 
-                    save_image_filename=os.path.join(abs_output_dir,name,str(i)+'.'+img_target_format)
+                    save_image_filename=os.path.join(abs_output_dir,name,str(j)+'.'+img_target_format)
                     full_image=cv2.imread(img_file)
-                    cls_image=full_image[x1:x2,y1:y2]
+                    cls_image=full_image[y1:y2,x1:x2]
                     cv2.imwrite(save_image_filename,cls_image)
+                    j=j+1
+
                 i=i+1
 
-                if i>3:
-                    break
+    print('namelist is ',namelist)
 
 if __name__ == '__main__':
     root = '/media/sdb/ISCAS_Dataset/crab/TFFRCNN'
