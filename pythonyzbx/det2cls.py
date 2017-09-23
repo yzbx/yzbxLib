@@ -35,10 +35,10 @@ def det2cls(root,sets,output_dir='classification'):
                 for obj in objs:
                     name = obj.find('name').text
                     bndbox = obj.find('bndbox')
-                    x1 = bndbox.find('xmin').text
-                    y1 = bndbox.find('ymin').text
-                    x2 = bndbox.find('xmax').text
-                    y2 = bndbox.find('ymax').text
+                    x1 = int(bndbox.find('xmin').text)
+                    y1 = int(bndbox.find('ymin').text)
+                    x2 = int(bndbox.find('xmax').text)
+                    y2 = int(bndbox.find('ymax').text)
 
                     if name not in namelist:
                         namelist.append(name)
