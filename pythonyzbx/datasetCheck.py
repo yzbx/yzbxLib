@@ -30,7 +30,7 @@ def check(image,xml):
 
             bboxes.append({"name":name,"xmin":xmin,"xmax":xmax,"ymin":ymin,"ymax":ymax})
 
-            cv2.rectangle(cvimg,(xmin,ymin),(xmax,ymax),(255,0,0),3)
+            cv2.rectangle(cvimg,(xmin,ymin),(xmax,ymax),(255,0,0),thickness=5)
             cv2.putText(cvimg,name,(xmin,max(ymin-20,0)),0,1e-3*h,(255,255,0))
 
     cv2.namedWindow("image",cv2.WINDOW_NORMAL)
