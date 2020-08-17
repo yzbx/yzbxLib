@@ -4,10 +4,13 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
+import argparse
 
-def sendmail(sender="youdaoyzbx@163.com",
+def sendmail(sender="yzbx_yzbx@163.com",
              receivers=['wangjiaxin15@mails.ucas.ac.cn'],
              files=[],
+             host='localhost',
+             port=25,
              ):
     #创建一个带附件的实例
     message = MIMEMultipart()
@@ -28,11 +31,20 @@ def sendmail(sender="youdaoyzbx@163.com",
         message.attach(att)
      
     try:
-        smtpObj = smtplib.SMTP('localhost')
+        if host=='localhost':
+            smtpObj = smtplib.SMTP('localhost',port)
+        else:
+            # port=465/994
+            smtpObj = smtplib.SMTP_SSL(host,port)
+            smtpObj.login('yzbx_yzbx@163.com','ABEUWDHJMAWUSQBU')
         smtpObj.sendmail(sender, receivers, message.as_string())
         print("send mail okay")
-    except smtplib.SMTPException:
-        print("Error: cannot send mail")
+    except smtplib.SMTPException as e:
+        print("Error: cannot send mail, {}".format(e))
 
-if __name__ == '__main__':      
-    sendmail()
+if __name__ == '__main__':     
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--port',type=int,default=25,help='port for stmp server')
+    parser.add_argument('--host',choices=['localhost','smtp.163.com'],help='host for stmp server')
+    args=parser.parse_args()
+    sendmail(host=args.host,port=args.port)
