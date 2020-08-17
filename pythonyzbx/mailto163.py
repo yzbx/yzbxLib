@@ -51,5 +51,6 @@ if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--port',type=int,default=25,help='port for stmp server')
     parser.add_argument('--host',choices=['localhost','smtp.163.com'],help='host for stmp server')
+    parser.add_argument('--note',default='test',help='note for mail')
     args=parser.parse_args()
-    sendmail(host=args.host,port=args.port)
+    sendmail(host=args.host,port=args.port,note=args.note)
