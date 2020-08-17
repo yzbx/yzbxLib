@@ -5,22 +5,27 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
 import argparse
+import time
 
+# localhost + 25
+# smtp.163.com + 465
 def sendmail(sender="yzbx_yzbx@163.com",
              receivers=['wangjiaxin15@mails.ucas.ac.cn'],
              files=[],
-             host='localhost',
-             port=25,
+             host='smtp.163.com',
+             port=465,
+             note='test'
              ):
     #创建一个带附件的实例
     message = MIMEMultipart()
     message['From'] = "{}<{}>".format(sender,Header(sender, 'utf-8'))
     message['To'] =  "{}<{}>".format(receivers[0],Header(receivers[0], 'utf-8'))
-    subject = 'send image and tensorboard log'
+    subject =note + ' send image and tensorboard log'
     message['Subject'] = Header(subject, 'utf-8')
      
     #邮件正文内容
-    text='send files: \n' + '\n'.join(files)
+    time_str = time.strftime("%Y-%m-%d___%H-%M-%S", time.localtime())
+    text=note+ ' send files: \n' + '\n'.join(files) + '\n'+ time_str
     message.attach(MIMEText(text, 'plain', 'utf-8'))
      
     for f in files:
