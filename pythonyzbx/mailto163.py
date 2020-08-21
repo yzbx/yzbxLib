@@ -49,8 +49,9 @@ def sendmail(sender="yzbx_yzbx@163.com",
 
 if __name__ == '__main__':     
     parser=argparse.ArgumentParser()
-    parser.add_argument('--port',type=int,default=25,help='port for stmp server')
-    parser.add_argument('--host',choices=['localhost','smtp.163.com'],help='host for stmp server')
+    parser.add_argument('--port',type=int,default=465,help='port for stmp server')
+    parser.add_argument('--host',choices=['smtp.163.com','localhost'],help='host for stmp server')
+    parser.add_argument('--files',nargs='*',help='files to upload')
     parser.add_argument('--note',default='test',help='note for mail')
     args=parser.parse_args()
-    sendmail(host=args.host,port=args.port,note=args.note)
+    sendmail(host=args.host,port=args.port,files=args.files,note=args.note)
